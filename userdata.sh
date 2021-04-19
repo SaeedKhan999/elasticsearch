@@ -23,7 +23,7 @@ printf '\n\n\n\n\n\n\n\n\n\n\n\n\n' | /usr/share/elasticsearch/bin/elasticsearch
 
 unzip /usr/share/elasticsearch/elasticsearch-ssl-http.zip 
 
-sudo cp /etc/elasticsearch/elasticsearch/http.p12 /etc/elasticsearch/
+sudo cp elasticsearch/http.p12 /etc/elasticsearch/
 sudo echo "xpack.security.http.ssl.enabled: true" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 sudo echo "xpack.security.http.ssl.keystore.path: "http.p12"" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 sudo echo "xpack.security.transport.ssl.enabled: true" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
